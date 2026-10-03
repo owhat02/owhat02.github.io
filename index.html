@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이새연 · AI · CV · Service Integration</title>
+  <meta name="description" content="이새연 — 데이터 품질부터 판정, API/화면 연동까지 남기는 AI·Computer Vision 개발자 포트폴리오" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="site-header">
+    <a class="logo" href="#top">owhat02</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#vibe">Vibe Coding</a>
+      <a href="#stack">Stack</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">AI · Computer Vision · Service Integration</p>
+      <h1>이새연</h1>
+      <p class="lede">
+        모델 점수에서 끝내지 않고,<br />
+        <strong>데이터 품질 → 판정 → API/화면</strong>까지 남기는 개발자입니다.
+      </p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://github.com/owhat02" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://idea79392.tistory.com" target="_blank" rel="noopener">Tistory</a>
+        <a class="btn" href="mailto:littlebear0420@gmail.com">Email</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="grid-2">
+        <p>
+          실제 카메라·서비스 입력에서만 보이는 문제를 좋아합니다.
+          오탐이면 데이터를 다시 보고, 판정이 애매하면 상태를 나누고,
+          분석이 끝났다고 끝나지 않게 API와 화면에 남깁니다.
+        </p>
+        <ul class="bullets">
+          <li>현장형 CV — 조명·반사 오탐을 모아 원인 분석 후 데이터·후처리</li>
+          <li>데이터 우선 실험 — 라벨링·Golden Set 없이 학습을 밀어붙이지 않음</li>
+          <li>AI → 서비스 연동 — 큐·진행률·API·UI까지 한 흐름</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="vibe" class="section card-section">
+      <h2>Vibe Coding</h2>
+      <p class="section-lead">
+        Cursor·ChatGPT 등으로 초안과 리팩터를 <em>빠르게</em> 만들되,
+        <strong>실제 입력·지표·동작으로 검증·수정한 뒤에만</strong> 반영합니다.
+        AI는 속도를 올려 주는 보조이고, 판정·데이터·연동 책임은 제가 집니다.
+      </p>
+      <div class="pill-row">
+        <span class="pill">초안 생성</span>
+        <span class="arrow">→</span>
+        <span class="pill">재현·검증</span>
+        <span class="arrow">→</span>
+        <span class="pill">수정 반영</span>
+      </div>
+      <ul class="bullets tight">
+        <li>졸작: 카메라 입력으로 오탐 재현 → 데이터 보완·저신뢰 탐지 후처리</li>
+        <li>ForenShield: 분석 결과가 API·화면에서 상태·진행률로 읽히는지 확인 후 머지</li>
+      </ul>
+    </section>
+
+    <section id="stack" class="section">
+      <h2>Tech Stack</h2>
+      <div class="stack-grid">
+        <article>
+          <h3>AI / CV</h3>
+          <p>Python, PyTorch, OpenCV, YOLO, NumPy, Pandas</p>
+        </article>
+        <article>
+          <h3>Backend</h3>
+          <p>Java, Spring Boot, FastAPI, REST, RabbitMQ</p>
+        </article>
+        <article>
+          <h3>Frontend (연동)</h3>
+          <p>TypeScript / React 화면과의 API·상태·진행률 연동</p>
+        </article>
+        <article>
+          <h3>Tools</h3>
+          <p>Git, GitHub(PR), Docker(기초), Roboflow, Jira/WBS</p>
+        </article>
+        <article class="wide">
+          <h3>관심·학습</h3>
+          <p>LLM 서비스 연동 · GA4 / BigQuery <span class="muted">(실무 경험 없음 — 관심·학습으로만 표기)</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article>
+          <div class="when">2026.01 – 2026.07</div>
+          <div>
+            <h3>SK쉴더스 Rookies 개발 5기</h3>
+            <p class="role">직업훈련 · AI / Backend</p>
+            <ul>
+              <li>미니 프로젝트: 휴가·대시보드 API, 실시간 경매(MACTA) 백엔드 — 스케줄러·트랜잭션·입찰 검증, 팀장으로서 ERD/API 규칙 정리</li>
+              <li>최종 ForenShield: Late Fusion, RabbitMQ 분석 전달, 진행률·결과 API/UI 연동, 애매 입력 상태 구분</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="when">2025.09 – 2025.12</div>
+          <div>
+            <h3>현장실습 · AI 모델 개발</h3>
+            <p class="role">모바일앱개발협동조합</p>
+            <ul>
+              <li>마스크 라벨링 도구·Golden Set 정리 후 Segmentation 실험</li>
+              <li>중복·불균형 정리, 클래스별 지표 기준 임계값 조정, 학습 체크포인트</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <article class="project">
+          <h3>ForenShield</h3>
+          <p class="tag">루키즈 최종 · 팀</p>
+          <p>딥페이크 탐지 Late Fusion, RabbitMQ·진행률, API/UI 연동, soft-gate식 상태 구분</p>
+          <div class="links">
+            <a href="https://github.com/sk-final-deepfake/ai-forensic" target="_blank" rel="noopener">AI</a>
+            <a href="https://github.com/sk-final-deepfake/backend-forensic" target="_blank" rel="noopener">Backend</a>
+            <a href="https://github.com/sk-final-deepfake/frontend-deepfake" target="_blank" rel="noopener">Frontend</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Crime Prediction</h3>
+          <p class="tag">졸업작품 · CV</p>
+          <p>YOLOv11 CCTV 칼·사람 탐지. LED·액정 오탐 분석 → 데이터 보완·후처리, 멀티 카메라</p>
+          <div class="links">
+            <a href="https://github.com/owhat02/Crime_Prediction" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>MACTA</h3>
+          <p class="tag">미니프젝3 · 팀장 · Backend</p>
+          <p>실시간 경매 스케줄러·트랜잭션·알림·입찰 검증, ERD/API 명세</p>
+          <div class="links">
+            <a href="https://github.com/owhat02/backend-macta" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Mini ERP Backend</h3>
+          <p class="tag">미니프젝2</p>
+          <p>휴가 신청·취소·조회 API, 대시보드 집계·잔여일</p>
+          <div class="links">
+            <a href="https://github.com/owhat02/mini-erp-system-backend" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>CVS Event Comparator</h3>
+          <p class="tag">미니프젝1</p>
+          <p>GS25/CU 행사 크롤링, Streamlit 추천·대시보드</p>
+          <div class="links">
+            <a href="https://github.com/owhat02/cvs-event-comparator" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>IT Trend Curator</h3>
+          <p class="tag">개인</p>
+          <p>URL → IT 콘텐츠 요약·번역 마크다운 초안 비동기 파이프라인</p>
+          <div class="links">
+            <a href="https://github.com/owhat02/IT_Trend_Curator" target="_blank" rel="noopener">Repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="edu" class="section">
+      <h2>Education &amp; Cert</h2>
+      <div class="grid-2">
+        <div>
+          <h3>영남대학교</h3>
+          <p>컴퓨터학부 정보통신공학전공 · 2021.03 – 2026.02 졸업</p>
+          <p class="muted">입학 시 정보통신공학과 → 학제 개편 후 현 전공명</p>
+        </div>
+        <div>
+          <h3>자격</h3>
+          <ul class="bullets">
+            <li>TOEIC 570 · 2024.11</li>
+            <li>정보처리기사 필기 합격 · 2025.06</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>협업·채용 문의 환영합니다.</p>
+      <ul class="contact-list">
+        <li><span>Email</span> <a href="mailto:littlebear0420@gmail.com">littlebear0420@gmail.com</a></li>
+        <li><span>Blog</span> <a href="https://idea79392.tistory.com" target="_blank" rel="noopener">idea79392.tistory.com</a></li>
+        <li><span>GitHub</span> <a href="https://github.com/owhat02" target="_blank" rel="noopener">github.com/owhat02</a></li>
+        <li><span>Phone</span> 010-4634-8429</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 이새연 · Built for GitHub Pages</p>
+  </footer>
+</body>
+</html>
