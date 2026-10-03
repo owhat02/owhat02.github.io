@@ -178,7 +178,59 @@ main {
 .one-liner {
   color: var(--soft);
   font-size: 0.98rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.work h4 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0.9rem 0 0.4rem;
+}
+
+.body {
+  color: var(--soft);
+  max-width: 42rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.detail {
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.2rem 0 0.9rem;
+  max-width: 44rem;
+}
+
+.detail li {
+  position: relative;
+  padding-left: 0.95rem;
+  color: var(--ink);
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.detail li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.detail b {
+  font-weight: 700;
+}
+
+.detail code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  background: var(--chip);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
 }
 
 .impl {

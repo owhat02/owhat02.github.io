@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>이새연 — AI · CV · Service Integration</title>
-  <meta name="description" content="이새연 포트폴리오. Computer Vision, 데이터, AI 서비스 연동." />
+  <meta name="description" content="이새연 포트폴리오. 프로젝트별 문제·구현·스택을 정리합니다." />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -52,17 +52,34 @@
     <section id="work" class="block">
       <div class="block-head">
         <h2>Projects</h2>
+        <p>이력서보다 자세히 — 문제 상황과 구현 내용을 정리했습니다.</p>
       </div>
 
+      <!-- 01 ForenShield -->
       <article class="work featured">
         <div class="work-meta">
           <span class="idx">01</span>
-          <span>SK쉴더스 Rookies 최종 · 2026</span>
+          <span>SK쉴더스 Rookies 최종 · 2026.05 – 2026.07</span>
         </div>
         <h3>ForenShield</h3>
-        <p class="one-liner">딥페이크·위변조 탐지와 증거 분석을 위한 포렌식 플랫폼</p>
-        <p class="impl"><b>구현</b> 다중 모델 Late Fusion 파이프라인, RabbitMQ 기반 분석 워커·진행률 연동, riskScore/overlay API·화면 연동, 애매 입력 soft-gate 상태 처리</p>
-        <p class="stack-line"><b>Stack</b> Python, PyTorch, RabbitMQ, S3, FastAPI/Spring 연동, TypeScript</p>
+        <p class="one-liner">딥페이크·위변조 탐지와 디지털 증거 분석을 위한 포렌식 플랫폼 (AI · Backend · Frontend 3-tier)</p>
+
+        <h4>문제</h4>
+        <p class="body">
+          CNN·Temporal·Optical Flow 등 모델이 여러 개인데, 점수가 서비스 상태·화면으로 안 남으면
+          운영·검증이 어렵습니다. 분석 중 진행 상황도 사용자에게 보이지 않으면 기다림만 생깁니다.
+        </p>
+
+        <h4>구현</h4>
+        <ul class="detail">
+          <li>Xception / TimeSformer / GMFlow 등 모듈 점수를 <b>Late Fusion</b>으로 합쳐 최종 판정 파이프라인 구성</li>
+          <li>다중 얼굴 추론, YuNet 기반 face gate, riskScore 동적 가중·forgery lane 구분</li>
+          <li>증거 업로드 후 <b>RabbitMQ → GPU 워커</b> 디스패치, 분석 진행률(<code>IN_PROGRESS</code>) 발행</li>
+          <li>오버레이 온디맨드 bake·진행 모달, 증거 상세(무결성 타임라인·risk gauge) API·UI 연동</li>
+          <li>얼굴 없음·크기 부족 등 애매 입력을 soft-gate로 상태 구분해 다음 행동이 가능하게 처리</li>
+        </ul>
+
+        <p class="stack-line"><b>Stack</b> Python, PyTorch, RabbitMQ, S3, FastAPI / Spring 연동, TypeScript</p>
         <div class="work-links">
           <a href="https://github.com/sk-final-deepfake/ai-forensic" target="_blank" rel="noopener">ai-forensic ↗</a>
           <a href="https://github.com/sk-final-deepfake/backend-forensic" target="_blank" rel="noopener">backend-forensic ↗</a>
@@ -70,6 +87,7 @@
         </div>
       </article>
 
+      <!-- 02 Crime -->
       <article class="work">
         <div class="work-meta">
           <span class="idx">02</span>
@@ -77,49 +95,100 @@
         </div>
         <h3>Crime Prediction</h3>
         <p class="one-liner">YOLOv11 기반 실시간 CCTV 칼·사람 탐지 모니터링</p>
-        <p class="impl"><b>구현</b> detect_objects 탐지 로직, 카메라 최대 3대 연동, LED·액정 반사 오탐 분석 후 데이터 보완·신뢰도 후처리, Colab 실행 환경 맞춤</p>
-        <p class="stack-line"><b>Stack</b> Python, YOLOv11, OpenCV, Colab</p>
+
+        <h4>문제</h4>
+        <p class="body">
+          실제 카메라 입력에서 LED 조명·스마트폰 액정 반사가 칼로 오인되는 오탐이 발생했습니다.
+          학습 데이터만 늘리는 방식으로는 현장 패턴을 설명하기 어려웠습니다.
+        </p>
+
+        <h4>구현</h4>
+        <ul class="detail">
+          <li>오탐 장면을 모아 공통 패턴(반짝이는 직선)을 확인한 뒤, 모형으로 각도·조명을 바꿔 데이터 보완</li>
+          <li>신뢰도가 낮은 탐지는 바로 경고로 올리지 않도록 후처리</li>
+          <li><code>detect_objects</code>로 탐지 로직 분리, 카메라 최대 3대 연동, Colab 실행 환경 맞춤</li>
+        </ul>
+
+        <p class="stack-line"><b>Stack</b> Python, YOLOv11, OpenCV, Colab, Roboflow</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/Crime_Prediction" target="_blank" rel="noopener">Crime_Prediction ↗</a>
         </div>
       </article>
 
+      <!-- 03 internship as detail block under experience? User asked portfolio more detail - add internship as project-like or expand experience. I'll expand experience section instead and keep projects as main. -->
+
+      <!-- 03 CVS -->
       <article class="work">
         <div class="work-meta">
           <span class="idx">03</span>
           <span>미니 프로젝트 1</span>
         </div>
         <h3>CVS Event Comparator</h3>
-        <p class="one-liner">편의점 행사 상품 비교·추천 대시보드</p>
-        <p class="impl"><b>구현</b> GS25/CU 행사 상품 크롤링, 홈 추천·무한 스크롤 UI, 뉴스/RSS·통계 대시보드·예산 조합 기능</p>
+        <p class="one-liner">편의점 행사 상품을 모아 비교·추천하는 Streamlit 대시보드</p>
+
+        <h4>문제</h4>
+        <p class="body">행사 정보가 브랜드·매장마다 흩어져 있어, 한곳에서 비교·추천하기 어려웠습니다.</p>
+
+        <h4>구현</h4>
+        <ul class="detail">
+          <li>GS25·CU 행사 상품 수집 자동화(크롤링)</li>
+          <li>홈 행사 추천·무한 스크롤 UI</li>
+          <li>뉴스/RSS 수집, 통계 대시보드, 예산 조합·검색 추천</li>
+        </ul>
+
         <p class="stack-line"><b>Stack</b> Python, Streamlit, Selenium, BeautifulSoup</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/cvs-event-comparator" target="_blank" rel="noopener">cvs-event-comparator ↗</a>
         </div>
       </article>
 
+      <!-- 04 Mini ERP -->
       <article class="work">
         <div class="work-meta">
           <span class="idx">04</span>
           <span>미니 프로젝트 2</span>
         </div>
         <h3>Mini ERP Backend</h3>
-        <p class="one-liner">사내 휴가·결재·대시보드를 담은 미니 ERP 백엔드</p>
-        <p class="impl"><b>구현</b> 휴가 신청·취소·조회/수정 API, 대시보드 집계·휴가 잔여일 계산</p>
+        <p class="one-liner">휴가·결재와 대시보드를 담은 미니 ERP API 서버</p>
+
+        <h4>문제</h4>
+        <p class="body">연차 신청·취소·승인 대기와 잔여일 집계가 API로 나뉘어 있지 않으면 프론트·관리 화면 연동이 어렵습니다.</p>
+
+        <h4>구현</h4>
+        <ul class="detail">
+          <li>휴가 신청·취소·조회·수정 API</li>
+          <li>대시보드 집계 응답, 휴가 잔여 일수 계산</li>
+        </ul>
+
         <p class="stack-line"><b>Stack</b> Java, Spring Boot</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/mini-erp-system-backend" target="_blank" rel="noopener">mini-erp-system-backend ↗</a>
         </div>
       </article>
 
+      <!-- 05 MACTA -->
       <article class="work">
         <div class="work-meta">
           <span class="idx">05</span>
           <span>미니 프로젝트 3 · 팀장</span>
         </div>
         <h3>MACTA</h3>
-        <p class="one-liner">트래픽·보안을 고려한 실시간 경매 플랫폼 백엔드</p>
-        <p class="impl"><b>구현</b> 경매 종료 스케줄러·트랜잭션 격리, 알림 경로, UTC/KST 동기화, 입찰 금액·한도·잔액 검증, ERD·API 명세</p>
+        <p class="one-liner">실시간 경매 플랫폼 백엔드 (스케줄·입찰·알림)</p>
+
+        <h4>문제</h4>
+        <p class="body">
+          마감 직전 입찰·종료 처리·알림이 겹치면 상태와 시간이 어긋나기 쉽습니다.
+          팀에서 API·시간대·트랜잭션 정의가 갈리면 구현이 멈춥니다.
+        </p>
+
+        <h4>구현</h4>
+        <ul class="detail">
+          <li>경매 종료 스케줄러, 트랜잭션 격리, 이벤트 리스너 중복·비동기 이슈 정리</li>
+          <li>알림 경로 수정, 판매자 입찰 알림 누락 보완</li>
+          <li>UTC/KST 동기화, 입찰 금액·한도·잔액 3단계 검증</li>
+          <li>ERD·API 명세와 작업 규칙을 먼저 맞춰 통합</li>
+        </ul>
+
         <p class="stack-line"><b>Stack</b> Java, Spring Boot, REST</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/backend-macta" target="_blank" rel="noopener">backend-macta ↗</a>
@@ -136,14 +205,18 @@
           <time>2026.01 – 2026.07</time>
           <div>
             <h3>SK쉴더스 Rookies 개발 5기</h3>
-            <p>미니 프로젝트 백엔드 → 최종 ForenShield AI·서비스 연동</p>
+            <p>미니 1~3 백엔드 → 최종 ForenShield AI·서비스 연동. 담당 기능 기한 내 구현.</p>
           </div>
         </li>
         <li>
           <time>2025.09 – 2025.12</time>
           <div>
-            <h3>현장실습 · AI 모델 개발</h3>
-            <p>모바일앱개발협동조합 · 라벨링 도구, Segmentation 실험, 학습 파이프라인</p>
+            <h3>현장실습 · AI 모델 개발 · 모바일앱개발협동조합</h3>
+            <p>
+              학습 데이터 부족 상황에서 마스크 라벨링 도구로 Golden Set를 만들고,
+              중복·클래스 불균형을 정리한 뒤 Segmentation 실험을 진행했습니다.
+              클래스별 지표를 보며 임계값을 조정하고, epoch별 체크포인트로 실험을 이어 갔습니다.
+            </p>
           </div>
         </li>
         <li>
