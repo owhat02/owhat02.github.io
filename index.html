@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>이새연 — AI · CV · Service Integration</title>
-  <meta name="description" content="이새연 포트폴리오. 데이터 품질부터 판정·API·화면 연동까지." />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <meta name="description" content="이새연 포트폴리오. Computer Vision, 데이터, AI 서비스 연동." />
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,25 +12,22 @@
   <header class="top">
     <a class="mark" href="#top">이새연</a>
     <nav>
-      <a href="#selected">Selected Work</a>
-      <a href="#method">Method</a>
+      <a href="#work">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="intro">
-      <p class="status">Open to opportunities · 2026</p>
+      <p class="status">AI · Computer Vision · Service Integration</p>
       <h1>
-        현장 입력이 흔들려도<br />
-        팀이 다음 행동을 할 수 있게<br />
-        <span>판정과 상태를 남기는</span> 개발자입니다.
+        데이터 품질부터 판정,<br />
+        API·화면 연동까지 이어 붙이는<br />
+        <span>개발자 이새연</span>입니다.
       </h1>
-      <p class="sub">
-        Computer Vision · 데이터 품질 · AI 결과의 API/화면 연동<br />
-        신입 · 영남대학교 정보통신공학전공
-      </p>
+      <p class="sub">영남대학교 컴퓨터학부 정보통신공학전공 · 2026.02 졸업</p>
       <div class="intro-links">
         <a href="https://github.com/owhat02" target="_blank" rel="noopener">GitHub ↗</a>
         <a href="https://idea79392.tistory.com" target="_blank" rel="noopener">Tistory ↗</a>
@@ -39,128 +35,82 @@
       </div>
     </section>
 
-    <section id="selected" class="block">
+    <section id="work" class="block">
       <div class="block-head">
-        <h2>Selected Work</h2>
-        <p>제가 직접 맡아서 끝까지 붙인 일만 골랐습니다.</p>
+        <h2>Projects</h2>
       </div>
 
       <article class="work featured">
         <div class="work-meta">
           <span class="idx">01</span>
-          <span>2026 · Team · Flagship</span>
+          <span>SK쉴더스 Rookies 최종 · 2026</span>
         </div>
-        <h3>ForenShield — 딥페이크·포렌식 플랫폼</h3>
-        <p class="role"><b>Role</b> AI 파이프라인 + Backend/Frontend 연동 핵심</p>
-        <p class="desc">
-          여러 모델 점수를 Late Fusion으로 합치고, RabbitMQ로 GPU 분석을 넘기며,
-          진행률·결과가 API와 화면에서 읽히도록 붙였습니다.
-          애매한 입력은 실패로 뭉개지 않고 상태를 나눴습니다.
-          “분석 종료”만으로 완료로 보지 않는 쪽으로 설계했습니다.
-        </p>
-        <ul class="highlights">
-          <li>Late Fusion · riskScore · overlay 연동</li>
-          <li>RabbitMQ 디스패치 · 진행률 발행</li>
-          <li>증거 상세 UI · soft-gate식 상태 구분</li>
-        </ul>
+        <h3>ForenShield</h3>
+        <p class="one-liner">딥페이크·위변조 탐지와 증거 분석을 위한 포렌식 플랫폼</p>
+        <p class="impl"><b>구현</b> 다중 모델 Late Fusion 파이프라인, RabbitMQ 기반 분석 워커·진행률 연동, riskScore/overlay API·화면 연동, 애매 입력 soft-gate 상태 처리</p>
+        <p class="stack-line"><b>Stack</b> Python, PyTorch, RabbitMQ, S3, FastAPI/Spring 연동, TypeScript</p>
         <div class="work-links">
           <a href="https://github.com/sk-final-deepfake/ai-forensic" target="_blank" rel="noopener">ai-forensic ↗</a>
           <a href="https://github.com/sk-final-deepfake/backend-forensic" target="_blank" rel="noopener">backend-forensic ↗</a>
           <a href="https://github.com/sk-final-deepfake/frontend-deepfake" target="_blank" rel="noopener">frontend-deepfake ↗</a>
         </div>
-        <p class="stack-line">Python · PyTorch · RabbitMQ · S3 · API · TypeScript 연동</p>
       </article>
 
       <article class="work">
         <div class="work-meta">
           <span class="idx">02</span>
-          <span>졸업작품 · CV</span>
+          <span>졸업작품</span>
         </div>
-        <h3>Crime Prediction — CCTV 칼·사람 탐지</h3>
-        <p class="role"><b>Role</b> 탐지 로직 · 멀티 카메라 · 오탐 개선</p>
-        <p class="desc">
-          실제 카메라에서 LED·액정 반사가 칼로 올라갔습니다.
-          오탐을 모아 “반짝이는 직선” 패턴을 확인한 뒤 데이터 보완과
-          저신뢰 탐지 후처리를 넣었습니다. 모델만 더 돌리지 않았습니다.
-        </p>
+        <h3>Crime Prediction</h3>
+        <p class="one-liner">YOLOv11 기반 실시간 CCTV 칼·사람 탐지 모니터링</p>
+        <p class="impl"><b>구현</b> detect_objects 탐지 로직, 카메라 최대 3대 연동, LED·액정 반사 오탐 분석 후 데이터 보완·신뢰도 후처리, Colab 실행 환경 맞춤</p>
+        <p class="stack-line"><b>Stack</b> Python, YOLOv11, OpenCV, Colab</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/Crime_Prediction" target="_blank" rel="noopener">Crime_Prediction ↗</a>
         </div>
-        <p class="stack-line">Python · YOLOv11 · OpenCV · Colab</p>
       </article>
 
       <article class="work">
         <div class="work-meta">
           <span class="idx">03</span>
-          <span>미니프젝3 · 팀장</span>
+          <span>미니 프로젝트 1</span>
         </div>
-        <h3>MACTA — 실시간 경매 백엔드</h3>
-        <p class="role"><b>Role</b> 백엔드 · 통합 · 규칙/문서 리딩</p>
-        <p class="desc">
-          종료 스케줄러·트랜잭션·알림·입찰 검증을 맡았습니다.
-          ERD·API·작업 규칙을 먼저 맞춰, 정의가 갈리는 구간을 이슈로 고정했습니다.
-        </p>
+        <h3>CVS Event Comparator</h3>
+        <p class="one-liner">편의점 행사 상품 비교·추천 대시보드</p>
+        <p class="impl"><b>구현</b> GS25/CU 행사 상품 크롤링, 홈 추천·무한 스크롤 UI, 뉴스/RSS·통계 대시보드·예산 조합 기능</p>
+        <p class="stack-line"><b>Stack</b> Python, Streamlit, Selenium, BeautifulSoup</p>
+        <div class="work-links">
+          <a href="https://github.com/owhat02/cvs-event-comparator" target="_blank" rel="noopener">cvs-event-comparator ↗</a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-meta">
+          <span class="idx">04</span>
+          <span>미니 프로젝트 2</span>
+        </div>
+        <h3>Mini ERP Backend</h3>
+        <p class="one-liner">사내 휴가·결재·대시보드를 담은 미니 ERP 백엔드</p>
+        <p class="impl"><b>구현</b> 휴가 신청·취소·조회/수정 API, 대시보드 집계·휴가 잔여일 계산</p>
+        <p class="stack-line"><b>Stack</b> Java, Spring Boot</p>
+        <div class="work-links">
+          <a href="https://github.com/owhat02/mini-erp-system-backend" target="_blank" rel="noopener">mini-erp-system-backend ↗</a>
+        </div>
+      </article>
+
+      <article class="work">
+        <div class="work-meta">
+          <span class="idx">05</span>
+          <span>미니 프로젝트 3 · 팀장</span>
+        </div>
+        <h3>MACTA</h3>
+        <p class="one-liner">트래픽·보안을 고려한 실시간 경매 플랫폼 백엔드</p>
+        <p class="impl"><b>구현</b> 경매 종료 스케줄러·트랜잭션 격리, 알림 경로, UTC/KST 동기화, 입찰 금액·한도·잔액 검증, ERD·API 명세</p>
+        <p class="stack-line"><b>Stack</b> Java, Spring Boot, REST</p>
         <div class="work-links">
           <a href="https://github.com/owhat02/backend-macta" target="_blank" rel="noopener">backend-macta ↗</a>
         </div>
-        <p class="stack-line">Java · Spring Boot</p>
       </article>
-
-      <div class="work-row">
-        <article class="work compact">
-          <div class="work-meta"><span class="idx">04</span><span>미니프젝2</span></div>
-          <h3>Mini ERP Backend</h3>
-          <p class="desc">휴가 CRUD·취소, 대시보드 집계·잔여일 API</p>
-          <a href="https://github.com/owhat02/mini-erp-system-backend" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
-        <article class="work compact">
-          <div class="work-meta"><span class="idx">05</span><span>미니프젝1</span></div>
-          <h3>CVS Event Comparator</h3>
-          <p class="desc">GS25/CU 크롤링, Streamlit 추천·대시보드</p>
-          <a href="https://github.com/owhat02/cvs-event-comparator" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
-        <article class="work compact">
-          <div class="work-meta"><span class="idx">06</span><span>개인</span></div>
-          <h3>IT Trend Curator</h3>
-          <p class="desc">URL → 요약·번역 마크다운 비동기 파이프라인</p>
-          <a href="https://github.com/owhat02/IT_Trend_Curator" target="_blank" rel="noopener">Repo ↗</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="method" class="block">
-      <div class="block-head">
-        <h2>How I use AI (Vibe Coding)</h2>
-        <p>생성으로 끝내지 않습니다. 검증이 제 일입니다.</p>
-      </div>
-      <div class="method-grid">
-        <div>
-          <h3>Problem Solving</h3>
-          <p>오류·오탐·애매한 판정을 재현하고 원인을 데이터/모델/연동 중 어디로 좁힌 뒤 직접 테스트합니다.</p>
-        </div>
-        <div>
-          <h3>Implementation</h3>
-          <p>Cursor·ChatGPT로 초안·리팩터 속도를 올리고, 프로젝트 기준(API·상태·지표)에 맞게 고칩니다.</p>
-        </div>
-        <div>
-          <h3>Review</h3>
-          <p>실제 카메라 입력, API 응답, 화면 상태로 확인한 뒤에만 머지합니다. 문서도 구현과 맞춰 둡니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack" class="block">
-      <div class="block-head">
-        <h2>Stack</h2>
-      </div>
-      <div class="tags">
-        <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>YOLO</span>
-        <span>NumPy</span><span>Pandas</span>
-        <span>Java</span><span>Spring Boot</span><span>FastAPI</span><span>REST</span><span>RabbitMQ</span>
-        <span>TypeScript</span><span>React 연동</span>
-        <span>Git</span><span>GitHub PR</span><span>Docker</span><span>Roboflow</span>
-      </div>
-      <p class="note">관심·학습: LLM 서비스 연동 · GA4/BigQuery (실무 경험 없음)</p>
     </section>
 
     <section id="experience" class="block">
@@ -172,29 +122,51 @@
           <time>2026.01 – 2026.07</time>
           <div>
             <h3>SK쉴더스 Rookies 개발 5기</h3>
-            <p>미니 백엔드(API·경매) → 최종 ForenShield AI·연동. 담당 기능 기한 내 구현.</p>
+            <p>미니 프로젝트 백엔드 → 최종 ForenShield AI·서비스 연동</p>
           </div>
         </li>
         <li>
           <time>2025.09 – 2025.12</time>
           <div>
             <h3>현장실습 · AI 모델 개발</h3>
-            <p>모바일앱개발협동조합. 라벨링 도구·Golden Set·Segmentation·임계값·체크포인트.</p>
+            <p>모바일앱개발협동조합 · 라벨링 도구, Segmentation 실험, 학습 파이프라인</p>
           </div>
         </li>
         <li>
           <time>2021.03 – 2026.02</time>
           <div>
-            <h3>영남대학교 컴퓨터학부 정보통신공학전공</h3>
+            <h3>영남대학교 정보통신공학전공</h3>
             <p>졸업 · TOEIC 570 · 정보처리기사 필기 합격</p>
           </div>
         </li>
       </ol>
     </section>
 
+    <section id="method" class="block">
+      <div class="block-head">
+        <h2>Vibe Coding</h2>
+      </div>
+      <p class="method-one">
+        Cursor·ChatGPT로 초안·리팩터를 보조하고, 실제 입력·지표·동작으로 검증한 뒤 반영합니다.
+      </p>
+    </section>
+
+    <section id="stack" class="block">
+      <div class="block-head">
+        <h2>Stack</h2>
+      </div>
+      <div class="tags">
+        <span>Python</span><span>PyTorch</span><span>OpenCV</span><span>YOLO</span>
+        <span>NumPy</span><span>Pandas</span>
+        <span>Java</span><span>Spring Boot</span><span>FastAPI</span><span>REST</span><span>RabbitMQ</span>
+        <span>TypeScript</span>
+        <span>Git</span><span>GitHub</span><span>Docker</span><span>Roboflow</span>
+        <span>Streamlit</span>
+      </div>
+    </section>
+
     <section id="contact" class="block contact">
       <h2>Contact</h2>
-      <p class="contact-lead">채용·협업 문의 편하게 주세요.</p>
       <p><a href="mailto:littlebear0420@gmail.com">littlebear0420@gmail.com</a></p>
       <p><a href="https://idea79392.tistory.com" target="_blank" rel="noopener">idea79392.tistory.com</a></p>
       <p><a href="https://github.com/owhat02" target="_blank" rel="noopener">github.com/owhat02</a></p>
